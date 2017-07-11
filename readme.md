@@ -1,4 +1,4 @@
-resolved dependencies
+resolved dependencies of project
 
 ```
 [INFO] --- maven-dependency-plugin:2.10:resolve (default-cli) @ demo ---
@@ -66,3 +66,35 @@ resolved dependencies
 [INFO]    org.slf4j:jul-to-slf4j:jar:1.7.25:compile
 [INFO]    org.eclipse.jetty:jetty-xml:jar:9.4.6.v20170531:compile
 ```
+
+
+usign jitpack. in .jrunrc:
+```
+[repositories]
+jit = https://jitpack.io
+```
+
+run with 
+``` 
+jrun com.github.warmuuh:jrun-managed-dependencies:0.0.1
+```
+
+resolved dependencies:
+```
+pmucha@mock-6457:~/.jrun/com.github.warmuuh/jrun-managed-dependencies/0.0.1$ ls
+accessors-smart-1.1.jar        jackson-databind-2.6.1.jar               jrun-managed-dependencies-0.0.1.jar  spring-beans-5.0.0.RC2.jar
+antlr4-runtime-4.5.1-1.jar     javax.servlet-api-3.1.0.jar              json-path-2.2.0.jar                  spring-boot-2.0.0.M2.jar
+asm-5.0.3.jar                  jetty-continuation-9.2.13.v20150730.jar  json-smart-2.2.1.jar                 spring-boot-autoconfigure-2.0.0.M2.jar
+commons-codec-1.9.jar          jetty-http-9.2.13.v20150730.jar          jul-to-slf4j-1.7.25.jar              spring-boot-starter-2.0.0.M2.jar
+commons-collections4-4.1.jar   jetty-io-9.2.13.v20150730.jar            junit-4.12.jar                       spring-boot-starter-logging-2.0.0.M2.jar
+commons-lang3-3.4.jar          jetty-security-9.2.13.v20150730.jar      log4j-over-slf4j-1.7.25.jar          spring-context-5.0.0.RC2.jar
+commons-logging-1.2.jar        jetty-server-9.2.13.v20150730.jar        logback-classic-1.2.3.jar            spring-core-5.0.0.RC2.jar
+guava-18.0.jar                 jetty-servlet-9.2.13.v20150730.jar       logback-core-1.2.3.jar               spring-expression-5.0.0.RC2.jar
+handlebars-4.0.6.jar           jetty-servlets-9.2.13.v20150730.jar      mainClass                            spring-jcl-5.0.0.RC2.jar
+httpclient-4.5.1.jar           jetty-util-9.2.13.v20150730.jar          pom.xml                              wiremock-2.6.0.jar
+httpcore-4.4.3.jar             jetty-webapp-9.2.13.v20150730.jar        slf4j-api-1.7.12.jar                 xmlunit-core-2.3.0.jar
+jackson-annotations-2.6.1.jar  jetty-xml-9.2.13.v20150730.jar           snakeyaml-1.18.jar                   xmlunit-legacy-2.3.0.jar
+jackson-core-2.6.1.jar         jopt-simple-4.9.jar                      spring-aop-5.0.0.RC2.jar             zjsonpatch-0.3.0.jar
+```
+
+=> for example different jackson version
